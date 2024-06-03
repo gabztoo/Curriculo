@@ -4,6 +4,7 @@ body {
     background-color: #1f1f1f;
     color: #fff;
     margin: 0;
+    overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
 .container {
@@ -200,6 +201,13 @@ input:checked+.slider:before {
     background-color: #ff4500;
     color: #fff;
     transition: none;
+}
+
+/* Imagens responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Estilos responsivos */
