@@ -1,4 +1,4 @@
-/* Estilos gerais  */
+/* Estilos gerais */
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #1f1f1f;
@@ -139,6 +139,8 @@ a:hover {
     background-color: rgba(31, 31, 31, 0.8);
     padding: 5px;
     border-radius: 5px;
+    max-width: calc(100% - 20px); /* Garante que o seletor de idioma não ultrapasse a largura da tela */
+    overflow-x: hidden; /* Evita que o seletor de idioma cause rolagem horizontal */
 }
 
 .flag-icon {
@@ -241,6 +243,7 @@ img {
     .language-switch {
         top: 5px;
         right: 5px;
+        max-width: calc(100% - 10px); /* Garante que o seletor de idioma não ultrapasse a largura da tela em dispositivos móveis */
     }
 
     .flag-icon {
@@ -261,4 +264,4 @@ img {
     input:checked+.slider:before {
         transform: translateX(20px);
     }
-
+}
