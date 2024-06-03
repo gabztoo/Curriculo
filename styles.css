@@ -211,3 +211,58 @@ img {
     height: auto;
     display: block;
 }
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+
+    .tablink {
+        font-size: 1em;
+        padding: 8px 10px;
+        flex-grow: 1;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .skill-bar-fill {
+        height: 30px;
+    }
+
+    .skill-name {
+        font-size: 1em;
+    }
+
+    .language-switch {
+        top: 5px;
+        right: 5px;
+        max-width: 95%; /* Garante que o seletor de idioma não ultrapasse a largura da tela em dispositivos móveis */
+        flex-wrap: wrap; /* Permite que os itens do seletor de idioma quebrem linha se necessário */
+    }
+
+    .flag-icon {
+        width: 25px;
+        height: 15px;
+    }
+
+    .switch {
+        width: 40px;
+        height: 20px;
+    }
+
+    .slider:before {
+        height: 18px;
+        width: 18px;
+    }
+
+    input:checked+.slider:before {
+        transform: translateX(20px);
+    }
+}
