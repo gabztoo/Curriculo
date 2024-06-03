@@ -1,270 +1,346 @@
 /* Estilos gerais */
 body {
     font-family: 'Roboto', Arial, sans-serif;
+    /* Define a fonte padrão */
     background-color: #1f1f1f;
+    /* Define a cor de fundo */
     color: #fff;
+    /* Define a cor do texto */
     margin: 0;
-    overflow-x: hidden; /* Evita rolagem horizontal */
+    /* Remove a margem padrão */
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 90%; /* Defina a largura máxima em porcentagem */
+    margin: 0 auto; /* Centralize o container horizontalmente */
+    padding: 20px; /* Adicione um espaçamento interno */
+    overflow-x: hidden; /* Esconda qualquer conteúdo que exceda a largura */
 }
+
 
 /* Estilos do cabeçalho */
 .header h1 {
     font-size: 2.5em;
+    /* Define o tamanho da fonte */
     font-weight: 700;
+    /* Define o peso da fonte */
     color: #ff4500;
+    /* Define a cor do texto */
     text-align: center;
+    /* Centraliza o texto horizontalmente */
 }
 
 /* Estilos das abas */
 .tabs {
     display: flex;
+    /* Exibe os elementos em linha */
     justify-content: center;
+    /* Centraliza os elementos horizontalmente */
     margin-bottom: 20px;
-    flex-wrap: wrap; /* Garante que as abas fiquem uma ao lado da outra */
+    /* Adiciona uma margem inferior */
 }
 
 .tablink {
     background-color: #333;
+    /* Define a cor de fundo */
     color: #fff;
+    /* Define a cor do texto */
     border: none;
+    /* Remove a borda */
     padding: 10px 20px;
+    /* Adiciona um espaçamento interno */
     cursor: pointer;
+    /* Exibe o cursor como um ponteiro */
     font-size: 1.1em;
+    /* Define o tamanho da fonte */
     transition: background-color 0.3s ease;
-    margin: 5px;
-    flex-grow: 1; /* Permite que as abas cresçam igualmente */
-    text-align: center;
+    /* Adiciona uma transição suave */
 }
 
 .tablink:hover {
     background-color: #555;
+    /* Define a cor de fundo ao passar o mouse */
 }
 
 .tabcontent {
     display: none;
+    /* Oculta o conteúdo inicialmente */
 }
 
 .active {
     display: block;
+    /* Exibe o conteúdo */
     animation: fadeIn 0.5s ease-in-out;
+    /* Adiciona uma animação de fade in */
 }
 
 .tablink:active {
     background-color: #e00505;
+    /* Cor da aba selecionada */
 }
 
 /* Animação de fade in */
 @keyframes fadeIn {
     from {
         opacity: 0;
+        /* Inicia com opacidade 0 */
     }
 
     to {
         opacity: 1;
+        /* Termina com opacidade 1 */
     }
 }
 
 /* Estilos dos títulos */
 h2 {
     color: #ff6600;
+    /* Define a cor do texto */
     font-size: 1.8em;
+    /* Define o tamanho da fonte */
     font-weight: 700;
+    /* Define o peso da fonte */
 }
 
 /* Estilos dos links */
 a {
     color: yellow;
+    /* Define a cor do texto */
     text-decoration: none;
+    /* Remove o sublinhado */
 }
 
 a:hover {
     text-decoration: underline;
+    /* Adiciona um sublinhado ao passar o mouse */
 }
 
 /* Estilos das barras de habilidade */
 .skill-bar {
     margin-bottom: 20px;
+    /* Adiciona uma margem inferior */
     width: 100%;
+    /* Define a largura como 100% */
     overflow: hidden;
+    /* Oculta o conteúdo que excede a largura */
     background-color: #333;
+    /* Define a cor de fundo */
     border-radius: 25px;
+    /* Adiciona bordas arredondadas */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Adiciona uma sombra */
     position: relative;
+    /* Define a posição como relativa */
 }
 
 .skill-name {
     position: absolute;
+    /* Define a posição como absoluta */
     left: 10px;
+    /* Posiciona à esquerda */
     top: 50%;
+    /* Posiciona no centro verticalmente */
     transform: translateY(-50%);
+    /* Ajusta a posição vertical */
     color: #fff;
+    /* Define a cor do texto */
     font-weight: 700;
+    /* Define o peso da fonte */
     font-size: 1.1em;
+    /* Define o tamanho da fonte */
 }
 
 .skill-bar-fill {
     height: 40px;
+    /* Define a altura */
     background: linear-gradient(90deg, #ff6600 0%, #ff4500 100%);
+    /* Define o gradiente de cor */
     width: 0;
+    /* Inicia com largura 0 */
     border-radius: 25px;
+    /* Adiciona bordas arredondadas */
     animation: fill 2s forwards;
+    /* Adiciona uma animação de preenchimento */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Adiciona uma sombra */
 }
 
 /* Animação de preenchimento */
 @keyframes fill {
     from {
         width: 0;
+        /* Inicia com largura 0 */
     }
 
     to {
         width: var(--skill-width);
+        /* Termina com a largura definida pela variável */
     }
 }
 
 /* Estilos do seletor de idioma */
 .language-switch {
     position: fixed;
+    /* Define a posição como fixa */
     top: 10px;
+    /* Posiciona no topo */
     right: 10px;
+    /* Posiciona à direita */
     display: flex;
+    /* Exibe os elementos em linha */
     align-items: center;
-    z-index: 1000;
-    background-color: rgba(31, 31, 31, 0.8);
-    padding: 5px;
-    border-radius: 5px;
-    max-width: 90%; /* Garante que o seletor de idioma não ultrapasse a largura da tela */
-    overflow-x: hidden; /* Evita que o seletor de idioma cause rolagem horizontal */
+    /* Centraliza os elementos verticalmente */
 }
 
 .flag-icon {
     width: 30px;
+    /* Define a largura */
     height: 20px;
+    /* Define a altura */
     margin: 0 5px;
+    /* Adiciona uma margem horizontal */
 }
 
 .switch {
     position: relative;
+    /* Define a posição como relativa */
     display: inline-block;
+    /* Exibe como um bloco em linha */
     width: 50px;
+    /* Define a largura */
     height: 24px;
+    /* Define a altura */
 }
 
 .switch input {
     opacity: 0;
+    /* Oculta o input */
     width: 0;
+    /* Define a largura como 0 */
     height: 0;
+    /* Define a altura como 0 */
 }
 
 .slider {
     position: absolute;
+    /* Define a posição como absoluta */
     cursor: pointer;
+    /* Exibe o cursor como um ponteiro */
     top: 0;
+    /* Posiciona no topo */
     left: 0;
+    /* Posiciona à esquerda */
     right: 0;
+    /* Posiciona à direita */
     bottom: 0;
+    /* Posiciona na parte inferior */
     background-color: #ccc;
+    /* Define a cor de fundo */
     transition: 0.4s;
+    /* Adiciona uma transição suave */
     border-radius: 24px;
+    /* Adiciona bordas arredondadas */
 }
 
 .slider:before {
     position: absolute;
+    /* Define a posição como absoluta */
     content: "";
+    /* Conteúdo vazio */
     height: 20px;
+    /* Define a altura */
     width: 20px;
+    /* Define a largura */
     left: 2px;
+    /* Posiciona à esquerda */
     bottom: 2px;
-    background-color: #fff;
+    /* Posiciona na parte inferior */
+    background-color: rgb(255, 255, 255);
+    /* Define a cor de fundo */
     transition: 0.4s;
+    /* Adiciona uma transição suave */
     border-radius: 50%;
+    /* Adiciona bordas arredondadas */
 }
 
 input:checked+.slider {
     background-color: #ff6600;
+    /* Define a cor de fundo quando selecionado */
 }
 
 input:checked+.slider:before {
     transform: translateX(26px);
+    /* Move o slider para a direita quando selecionado */
 }
 
 .tablink:active {
-    background-color: #ff4500;
-    color: #fff;
+    background-color: #ff4500; /* Cor de fundo desejada */
+    color: #fff; /* Cor do texto na aba selecionada */
 }
 
 .active {
-    background-color: #ff4500;
-    color: #fff;
-    transition: none;
+    background-color: #ff4500; /* Cor de fundo para aba ativa */
+    color: #fff; /* Cor do texto na aba ativa */
+    transition: none; /* Remover transição */
 }
 
-/* Imagens responsivas */
-img {
+/* Garantir que o body e o contêiner principal ocupem toda a largura da tela sem rolagem horizontal */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    max-width: 90%; /* Defina a largura máxima em porcentagem */
+    overflow-x: hidden; /* Esconda qualquer conteúdo que exceda a largura */
+}
+
+/* Ajustar o contêiner de troca de idioma */
+.language-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+/* Garantir que as bandeiras não ultrapassem a largura da tela */
+.flag-icon {
+    max-width: 30px;
+    max-height: 30px;
+    margin: 0 10px;
+}
+
+/* Garantir que o cabeçalho e o conteúdo das abas não causem rolagem horizontal */
+.header {
+    padding: 20px;
     max-width: 100%;
-    height: auto;
-    display: block;
+    box-sizing: border-box;
 }
 
-/* Estilos responsivos */
-@media (max-width: 600px) {
-    .header h1 {
-        font-size: 1.8em;
-    }
+.tabcontent {
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+}
 
-    .tabs {
-        flex-wrap: wrap;
-    }
+/* Estilos das barras de habilidade */
+.skill-bar {
+    width: 100%;
+    background-color: #ddd;
+    margin: 10px 0;
+}
 
-    .tablink {
-        font-size: 1em;
-        padding: 8px 10px;
-        flex-grow: 1;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    .skill-bar-fill {
-        height: 30px;
-    }
-
-    .skill-name {
-        font-size: 1em;
-    }
-
-    .language-switch {
-        top: 5px;
-        right: 5px;
-        max-width: 95%; /* Garante que o seletor de idioma não ultrapasse a largura da tela em dispositivos móveis */
-        flex-wrap: wrap; /* Permite que os itens do seletor de idioma quebrem linha se necessário */
-    }
-
-    .flag-icon {
-        width: 25px;
-        height: 15px;
-    }
-
-    .switch {
-        width: 40px;
-        height: 20px;
-    }
-
-    .slider:before {
-        height: 18px;
-        width: 18px;
-    }
-
-    input:checked+.slider:before {
-        transform: translateX(20px);
-    }
+.skill-bar-fill {
+    height: 100%;
+    background-color: #2196F3;
+    width: 0;
+    transition: width 1s;
 }
 
 .language-switcher {
