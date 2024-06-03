@@ -139,9 +139,12 @@ a:hover {
     background-color: rgba(31, 31, 31, 0.8);
     padding: 5px;
     border-radius: 5px;
-    max-width: 90%; /* Garante que o seletor de idioma não ultrapasse a largura da tela */
-    overflow-x: hidden; /* Evita que o seletor de idioma cause rolagem horizontal */
+    max-width: calc(100% - 20px); /* Ajuste para considerar o padding e a margem */
+    overflow-x: hidden; /* Evita rolagem horizontal */
 }
+
+/* Outros estilos permanecem os mesmos */
+
 
 .flag-icon {
     width: 30px;
