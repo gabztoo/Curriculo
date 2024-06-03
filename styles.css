@@ -25,9 +25,7 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    flex-wrap: nowrap; /* Garante que as abas fiquem uma ao lado da outra */
-    overflow-x: auto; /* Permite rolagem horizontal se necessário */
-    -webkit-overflow-scrolling: touch; /* Melhora a rolagem no iOS */
+    flex-wrap: wrap; /* Garante que as abas fiquem uma ao lado da outra */
 }
 
 .tablink {
@@ -39,7 +37,8 @@ body {
     font-size: 1.1em;
     transition: background-color 0.3s ease;
     margin: 5px;
-    flex-shrink: 0;
+    flex-grow: 1; /* Permite que as abas cresçam igualmente */
+    text-align: center;
 }
 
 .tablink:hover {
@@ -135,8 +134,8 @@ a:hover {
     right: 10px;
     display: flex;
     align-items: center;
-    z-index: 1000; /* Garante que o seletor de idioma fique acima de outros elementos */
-    background-color: rgba(31, 31, 31, 0.8); /* Fundo semi-transparente para melhor visibilidade */
+    z-index: 1000;
+    background-color: rgba(31, 31, 31, 0.8);
     padding: 5px;
     border-radius: 5px;
 }
@@ -210,14 +209,13 @@ input:checked+.slider:before {
     }
 
     .tabs {
-        flex-wrap: nowrap;
-        overflow-x: auto;
+        flex-wrap: wrap;
     }
 
     .tablink {
         font-size: 1em;
-        padding: 10px;
-        flex-shrink: 0;
+        padding: 8px 10px;
+        flex-grow: 1;
     }
 
     h2 {
