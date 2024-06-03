@@ -267,3 +267,15 @@ img {
     }
 }
 
+.language-switcher {
+    position: fixed;
+    bottom: 20px; /* ou qualquer valor que você preferir */
+    right: 20px; /* ou qualquer valor que você preferir */
+    z-index: 9999; /* certifique-se de que o botão esteja acima de outros elementos */
+}
+
+@media (min-width: 768px) {
+    .language-switcher {
+        position: static; /* retorna ao posicionamento padrão em telas maiores */
+    }
+}
