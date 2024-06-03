@@ -1,0 +1,286 @@
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    /* Define a fonte padrão */
+    background-color: #1f1f1f;
+    /* Define a cor de fundo */
+    color: #fff;
+    /* Define a cor do texto */
+    margin: 0;
+    /* Remove a margem padrão */
+}
+
+.container {
+    max-width: 800px;
+    /* Define a largura máxima do container */
+    margin: 0 auto;
+    /* Centraliza o container horizontalmente */
+    padding: 20px;
+    /* Adiciona um espaçamento interno */
+}
+
+/* Estilos do cabeçalho */
+.header h1 {
+    font-size: 2.5em;
+    /* Define o tamanho da fonte */
+    font-weight: 700;
+    /* Define o peso da fonte */
+    color: #ff4500;
+    /* Define a cor do texto */
+    text-align: center;
+    /* Centraliza o texto horizontalmente */
+}
+
+/* Estilos das abas */
+.tabs {
+    display: flex;
+    /* Exibe os elementos em linha */
+    justify-content: center;
+    /* Centraliza os elementos horizontalmente */
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior */
+}
+
+.tablink {
+    background-color: #333;
+    /* Define a cor de fundo */
+    color: #fff;
+    /* Define a cor do texto */
+    border: none;
+    /* Remove a borda */
+    padding: 10px 20px;
+    /* Adiciona um espaçamento interno */
+    cursor: pointer;
+    /* Exibe o cursor como um ponteiro */
+    font-size: 1.1em;
+    /* Define o tamanho da fonte */
+    transition: background-color 0.3s ease;
+    /* Adiciona uma transição suave */
+}
+
+.tablink:hover {
+    background-color: #555;
+    /* Define a cor de fundo ao passar o mouse */
+}
+
+.tabcontent {
+    display: none;
+    /* Oculta o conteúdo inicialmente */
+}
+
+.active {
+    display: block;
+    /* Exibe o conteúdo */
+    animation: fadeIn 0.5s ease-in-out;
+    /* Adiciona uma animação de fade in */
+}
+
+.tablink:active {
+    background-color: #e00505;
+    /* Cor da aba selecionada */
+}
+
+/* Animação de fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Inicia com opacidade 0 */
+    }
+
+    to {
+        opacity: 1;
+        /* Termina com opacidade 1 */
+    }
+}
+
+/* Estilos dos títulos */
+h2 {
+    color: #ff6600;
+    /* Define a cor do texto */
+    font-size: 1.8em;
+    /* Define o tamanho da fonte */
+    font-weight: 700;
+    /* Define o peso da fonte */
+}
+
+/* Estilos dos links */
+a {
+    color: yellow;
+    /* Define a cor do texto */
+    text-decoration: none;
+    /* Remove o sublinhado */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Adiciona um sublinhado ao passar o mouse */
+}
+
+/* Estilos das barras de habilidade */
+.skill-bar {
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior */
+    width: 100%;
+    /* Define a largura como 100% */
+    overflow: hidden;
+    /* Oculta o conteúdo que excede a largura */
+    background-color: #333;
+    /* Define a cor de fundo */
+    border-radius: 25px;
+    /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Adiciona uma sombra */
+    position: relative;
+    /* Define a posição como relativa */
+}
+
+.skill-name {
+    position: absolute;
+    /* Define a posição como absoluta */
+    left: 10px;
+    /* Posiciona à esquerda */
+    top: 50%;
+    /* Posiciona no centro verticalmente */
+    transform: translateY(-50%);
+    /* Ajusta a posição vertical */
+    color: #fff;
+    /* Define a cor do texto */
+    font-weight: 700;
+    /* Define o peso da fonte */
+    font-size: 1.1em;
+    /* Define o tamanho da fonte */
+}
+
+.skill-bar-fill {
+    height: 40px;
+    /* Define a altura */
+    background: linear-gradient(90deg, #ff6600 0%, #ff4500 100%);
+    /* Define o gradiente de cor */
+    width: 0;
+    /* Inicia com largura 0 */
+    border-radius: 25px;
+    /* Adiciona bordas arredondadas */
+    animation: fill 2s forwards;
+    /* Adiciona uma animação de preenchimento */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Adiciona uma sombra */
+}
+
+/* Animação de preenchimento */
+@keyframes fill {
+    from {
+        width: 0;
+        /* Inicia com largura 0 */
+    }
+
+    to {
+        width: var(--skill-width);
+        /* Termina com a largura definida pela variável */
+    }
+}
+
+/* Estilos do seletor de idioma */
+.language-switch {
+    position: fixed;
+    /* Define a posição como fixa */
+    top: 10px;
+    /* Posiciona no topo */
+    right: 10px;
+    /* Posiciona à direita */
+    display: flex;
+    /* Exibe os elementos em linha */
+    align-items: center;
+    /* Centraliza os elementos verticalmente */
+}
+
+.flag-icon {
+    width: 30px;
+    /* Define a largura */
+    height: 20px;
+    /* Define a altura */
+    margin: 0 5px;
+    /* Adiciona uma margem horizontal */
+}
+
+.switch {
+    position: relative;
+    /* Define a posição como relativa */
+    display: inline-block;
+    /* Exibe como um bloco em linha */
+    width: 50px;
+    /* Define a largura */
+    height: 24px;
+    /* Define a altura */
+}
+
+.switch input {
+    opacity: 0;
+    /* Oculta o input */
+    width: 0;
+    /* Define a largura como 0 */
+    height: 0;
+    /* Define a altura como 0 */
+}
+
+.slider {
+    position: absolute;
+    /* Define a posição como absoluta */
+    cursor: pointer;
+    /* Exibe o cursor como um ponteiro */
+    top: 0;
+    /* Posiciona no topo */
+    left: 0;
+    /* Posiciona à esquerda */
+    right: 0;
+    /* Posiciona à direita */
+    bottom: 0;
+    /* Posiciona na parte inferior */
+    background-color: #ccc;
+    /* Define a cor de fundo */
+    transition: 0.4s;
+    /* Adiciona uma transição suave */
+    border-radius: 24px;
+    /* Adiciona bordas arredondadas */
+}
+
+.slider:before {
+    position: absolute;
+    /* Define a posição como absoluta */
+    content: "";
+    /* Conteúdo vazio */
+    height: 20px;
+    /* Define a altura */
+    width: 20px;
+    /* Define a largura */
+    left: 2px;
+    /* Posiciona à esquerda */
+    bottom: 2px;
+    /* Posiciona na parte inferior */
+    background-color: rgb(255, 255, 255);
+    /* Define a cor de fundo */
+    transition: 0.4s;
+    /* Adiciona uma transição suave */
+    border-radius: 50%;
+    /* Adiciona bordas arredondadas */
+}
+
+input:checked+.slider {
+    background-color: #ff6600;
+    /* Define a cor de fundo quando selecionado */
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+    /* Move o slider para a direita quando selecionado */
+}
+
+.tablink:active {
+    background-color: #ff4500; /* Cor de fundo desejada */
+    color: #fff; /* Cor do texto na aba selecionada */
+}
+
+.active {
+    background-color: #ff4500; /* Cor de fundo para aba ativa */
+    color: #fff; /* Cor do texto na aba ativa */
+    transition: none; /* Remover transição */
+}
