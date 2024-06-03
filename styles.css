@@ -23,9 +23,11 @@ body {
 /* Estilos das abas */
 .tabs {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
+    flex-wrap: nowrap; /* Garante que as abas fiquem uma ao lado da outra */
+    overflow-x: auto; /* Permite rolagem horizontal se necessário */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem no iOS */
 }
 
 .tablink {
@@ -36,7 +38,8 @@ body {
     cursor: pointer;
     font-size: 1.1em;
     transition: background-color 0.3s ease;
-    margin: 5px; /* Adicionado para melhor espaçamento em dispositivos móveis */
+    margin: 5px;
+    flex-shrink: 0;
 }
 
 .tablink:hover {
@@ -132,6 +135,10 @@ a:hover {
     right: 10px;
     display: flex;
     align-items: center;
+    z-index: 1000; /* Garante que o seletor de idioma fique acima de outros elementos */
+    background-color: rgba(31, 31, 31, 0.8); /* Fundo semi-transparente para melhor visibilidade */
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .flag-icon {
@@ -203,12 +210,14 @@ input:checked+.slider:before {
     }
 
     .tabs {
-        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: auto;
     }
 
     .tablink {
         font-size: 1em;
         padding: 10px;
+        flex-shrink: 0;
     }
 
     h2 {
