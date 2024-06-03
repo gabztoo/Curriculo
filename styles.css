@@ -319,4 +319,64 @@ body, html {
     margin: 10px 0;
     max-width: 90%;
     /* Defina a largura máxima em porcentagem */
+    overflow-x: hidden;    /* Esconda qualquer conteúdo que exceda a largura */
+}
+
+.language-switch img {
+    max-width: 100%;
+    /* Garante que as imagens não ultrapassem a largura do contêiner */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+/* Garantir que as bandeiras não ultrapassem a largura da tela */
+.flag-icon {
+    max-width: 30px;
+    max-height: 30px;
+    margin: 0 10px;
+}
+
+/* Garantir que o cabeçalho e o conteúdo das abas não causem rolagem horizontal */
+.header {
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.tabcontent {
     overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilos das barras de habilidade */
+.skill-bar {
+    width: 100%;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    background-color: #2196F3;
+    width: 0;
+    transition: width 1s;
+}
+
+.language-switcher {
+    position: fixed;
+    bottom: 20px;
+    /* ou qualquer valor que você preferir */
+    right: 20px;
+    /* ou qualquer valor que você preferir */
+    z-index: 9999;
+    /* certifique-se de que o botão esteja acima de outros elementos */
+}
+
+@media (min-width: 768px) {
+    .language-switcher {
+        position: static;
+        /* retorna ao posicionamento padrão em telas maiores */
+    }
+}
+
