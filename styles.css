@@ -17,6 +17,11 @@ body {
     overflow-x: hidden; /* Esconda qualquer conteúdo que exceda a largura */
 }
 
+.container img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
 
 /* Estilos do cabeçalho */
 .header h1 {
@@ -301,13 +306,11 @@ body, html {
     overflow-x: hidden; /* Esconda qualquer conteúdo que exceda a largura */
 }
 
-/* Ajustar o contêiner de troca de idioma */
-.language-switch {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
+.language-switch img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
 }
+
 
 /* Garantir que as bandeiras não ultrapassem a largura da tela */
 .flag-icon {
