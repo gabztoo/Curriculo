@@ -11,22 +11,15 @@ body {
 }
 
 .container {
-    max-width: 90%;
-    /* Defina a largura máxima em porcentagem */
-    margin: 0 auto;
-    /* Centralize o container horizontalmente */
-    padding: 20px;
-    /* Adicione um espaçamento interno */
-    overflow-x: hidden;
-    /* Esconda qualquer conteúdo que exceda a largura */
+    max-width: 90%; /* Defina a largura máxima em porcentagem */
+    margin: 0 auto; /* Centralize o container horizontalmente */
+    padding: 20px; /* Adicione um espaçamento interno */
+    overflow-x: hidden; /* Esconda qualquer conteúdo que exceda a largura */
 }
 
-.container img,
-.language-switch img {
-    max-width: 100%;
-    /* Garante que as imagens não ultrapassem a largura do contêiner */
-    height: auto;
-    /* Mantém a proporção da imagem */
+.container img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 /* Estilos do cabeçalho */
@@ -49,10 +42,13 @@ body {
     /* Centraliza os elementos horizontalmente */
     margin-bottom: 20px;
     /* Adiciona uma margem inferior */
-    overflow-x: auto;
-    /* Adiciona rolagem horizontal se as abas ultrapassarem a largura da tela */
-    -webkit-overflow-scrolling: touch;
-    /* Adiciona rolagem suave em dispositivos iOS */
+    overflow-x: auto; /* Adiciona rolagem horizontal para abas em dispositivos menores */
+    scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
+    -ms-overflow-style: none; /* Oculta a barra de rolagem no IE e Edge */
+}
+
+.tabs::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no Chrome e Safari */
 }
 
 .tablink {
@@ -63,7 +59,7 @@ body {
     border: none;
     /* Remove a borda */
     padding: 10px 20px;
-    /* Adiciona um espaçamento interno */
+    /* Adicione um espaçamento interno */
     cursor: pointer;
     /* Exibe o cursor como um ponteiro */
     font-size: 1.1em;
@@ -151,7 +147,7 @@ a:hover {
 .skill-name {
     position: absolute;
     /* Define a posição como absoluta */
-    left:    10px;
+    left: 10px;
     /* Posiciona à esquerda */
     top: 50%;
     /* Posiciona no centro verticalmente */
@@ -289,19 +285,14 @@ input:checked+.slider:before {
 }
 
 .tablink:active {
-    background-color: #ff4500;
-    /* Cor de fundo desejada */
-    color: #fff;
-    /* Cor do texto na aba selecionada */
+    background-color: #ff4500; /* Cor de fundo desejada */
+    color: #fff; /* Cor do texto na aba selecionada */
 }
 
 .active {
-    background-color: #ff4500;
-    /* Cor de fundo para aba ativa */
-    color: #fff;
-    /* Cor do texto na aba ativa */
-    transition: none;
-    /* Remover transição */
+    background-color: #ff4500; /* Cor de fundo para aba ativa */
+    color: #fff; /* Cor do texto na aba ativa */
+    transition: none; /* Remover transição */
 }
 
 /* Garantir que o body e o contêiner principal ocupem toda a largura da tela sem rolagem horizontal */
@@ -317,17 +308,15 @@ body, html {
     align-items: center;
     justify-content: center;
     margin: 10px 0;
-    max-width: 90%;
-    /* Defina a largura máxima em porcentagem */
-    overflow-x: hidden;    /* Esconda qualquer conteúdo que exceda a largura */
+    max-width: 90%; /* Defina a largura máxima em porcentagem */
+    overflow-x: hidden; /* Esconda qualquer conteúdo que exceda a largura */
 }
 
 .language-switch img {
-    max-width: 100%;
-    /* Garante que as imagens não ultrapassem a largura do contêiner */
-    height: auto;
-    /* Mantém a proporção da imagem */
+    max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
 }
+
 
 /* Garantir que as bandeiras não ultrapassem a largura da tela */
 .flag-icon {
@@ -365,18 +354,37 @@ body, html {
 
 .language-switcher {
     position: fixed;
-    bottom: 20px;
-    /* ou qualquer valor que você preferir */
-    right: 20px;
-    /* ou qualquer valor que você preferir */
-    z-index: 9999;
-    /* certifique-se de que o botão esteja acima de outros elementos */
+    bottom: 20px; /* ou qualquer valor que você preferir */
+    right: 20px; /* ou qualquer valor que você preferir */
+    z-index: 9999; /* certifique-se de que o botão esteja acima de outros elementos */
 }
 
 @media (min-width: 768px) {
     .language-switcher {
-        position: static;
-        /* retorna ao posicionamento padrão em telas maiores */
+        position: static; /* retorna ao posicionamento padrão em telas maiores */
     }
 }
 
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em; /* Reduz o tamanho da fonte do cabeçalho */
+    }
+    
+    .tabs {
+        overflow-x: auto; /* Adiciona rolagem horizontal para as abas */
+    }
+
+    .tab
+    .link {
+        font-size: 0.9em; /* Reduz o tamanho da fonte das abas */
+    }
+
+    .tabcontent {
+        font-size: 0.9em; /* Reduz o tamanho da fonte do conteúdo das abas */
+    }
+
+    .header {
+        font-size: 1em; /* Reduz o tamanho da fonte do conteúdo do cabeçalho */
+    }
+}
