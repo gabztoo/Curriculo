@@ -133,18 +133,15 @@ a:hover {
     position: fixed;
     top: 10px;
     right: 10px;
-    display: flex;
-    align-items: center;
     z-index: 1000;
     background-color: rgba(31, 31, 31, 0.8);
     padding: 5px;
     border-radius: 5px;
     max-width: calc(100% - 20px); /* Ajuste para considerar o padding e a margem */
     overflow-x: hidden; /* Evita rolagem horizontal */
+    display: flex;
+    align-items: center;
 }
-
-/* Outros estilos permanecem os mesmos */
-
 
 .flag-icon {
     width: 30px;
@@ -246,8 +243,7 @@ img {
     .language-switch {
         top: 5px;
         right: 5px;
-        max-width: 95%; /* Garante que o seletor de idioma não ultrapasse a largura da tela em dispositivos móveis */
-        flex-wrap: wrap; /* Permite que os itens do seletor de idioma quebrem linha se necessário */
+        max-width: calc(100% - 10px); /* Ajuste para considerar o padding e a margem */
     }
 
     .flag-icon {
