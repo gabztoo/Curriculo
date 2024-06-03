@@ -388,3 +388,12 @@ body, html {
         font-size: 1em; /* Reduz o tamanho da fonte do conteúdo do cabeçalho */
     }
 }
+@media (max-width: 768px) {
+    .tabcontent {
+        overflow-x: auto; /* Adiciona rolagem horizontal para o conteúdo das abas */
+    }
+    
+    .header {
+        font-size: 1.5em; /* Ajusta o tamanho da fonte do cabeçalho para dispositivos móveis */
+    }
+}
