@@ -213,6 +213,9 @@ img {
 }
 
 /* Estilos responsivos */
+/* Seu código CSS existente */
+
+/* Estilos responsivos */
 @media (max-width: 600px) {
     .header h1 {
         font-size: 1.8em;
@@ -263,5 +266,17 @@ img {
 
     input:checked+.slider:before {
         transform: translateX(20px);
+    }
+
+    /* Adicione essas regras aqui */
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .container {
+        width: 100%;
+        padding: 0 10px; /* Ajuste o padding para que os elementos fiquem dentro da tela */
     }
 }
