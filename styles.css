@@ -139,7 +139,7 @@ a:hover {
     background-color: rgba(31, 31, 31, 0.8);
     padding: 5px;
     border-radius: 5px;
-    max-width: calc(100% - 20px); /* Garante que o seletor de idioma não ultrapasse a largura da tela */
+    max-width: 90%; /* Garante que o seletor de idioma não ultrapasse a largura da tela */
     overflow-x: hidden; /* Evita que o seletor de idioma cause rolagem horizontal */
 }
 
@@ -243,7 +243,8 @@ img {
     .language-switch {
         top: 5px;
         right: 5px;
-        max-width: calc(100% - 10px); /* Garante que o seletor de idioma não ultrapasse a largura da tela em dispositivos móveis */
+        max-width: 95%; /* Garante que o seletor de idioma não ultrapasse a largura da tela em dispositivos móveis */
+        flex-wrap: wrap; /* Permite que os itens do seletor de idioma quebrem linha se necessário */
     }
 
     .flag-icon {
